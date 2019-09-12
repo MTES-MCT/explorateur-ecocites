@@ -1,0 +1,327 @@
+/*!
+ * Explorateur Écocités
+ * Copyright (C) 2019 l'État, ministère chargé du logement
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.ecocite-hero--home{
+	min-height: 100vh;
+	background: url('/img/backgrounds/page_de_garde.jpg') no-repeat center fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.logo-top-left {
+	position: absolute;
+	top: 60px;
+	padding: 10px;
+	img {
+		padding:10px;
+		float: left;
+		height: 120px;
+	}
+}
+
+.ecocite-logo-wrapper--hero{
+	margin-top: $navbar-height * 1.05;
+	padding: 15px 15px 30px 15px;
+	.hero-title {
+		p {
+			padding: 0;
+			font-size: 2em;
+			font-weight: bold;
+			color: #ffffff;
+			@media (min-width: 720px) {
+				padding: 0 10%;
+			}
+		}
+	}
+	.hero-description {
+		p {
+			padding: 0 10%;
+			font-size: 1.6em;
+			font-weight: bold;
+			color: #e6e6e6;
+			@media (min-width: 720px) {
+				padding: 0 10%;
+				color: $gray-dark;
+			}
+		}
+	}
+	p{
+		margin-top: 1em;
+		font-size: 1.8em;
+	}
+}
+
+$size-header-fo: 48px;
+$breakpoint-navbar: 1080px;
+$height-small-screen: 100%;
+$height-large-screen: calc(100vh - #{$size-header-fo});
+
+.scroll-down-btn-wrapper--hero{
+	@media(min-width: $breakpoint-navbar) {
+		position: absolute;
+		bottom: $grid-gutter-width/2;
+		left: 0;
+		right: 0;
+	}
+}
+
+.scroll-down-btn{
+	display: block;
+	width: 8%;
+	height: 0;
+	padding-top: 8%;
+	margin: 5px auto;
+	border-radius: 1000em;
+	border: 1px solid #fff;
+	background: rgba($charcoal, 0.25) url('/img/icons/ecocite_arrow_down_white.svg') center no-repeat;
+	background-size: 50%;
+	overflow: hidden;
+	text-indent: -9999px;
+	transition: all ease-in-out 0.3s;
+	&:hover{
+		background-color: rgba($charcoal, 0.4);
+		box-shadow: 0px 0px 15px rgba(60, 60, 60, 1);
+	}
+}
+
+.navbar-learn-more {
+	background-color: rgb(95, 95, 95);
+	color: #FFF;
+}
+
+.navbar-button {
+	color: rgb(95, 95, 95);
+}
+
+.navbar-login {
+	color: rgb(200, 200, 200);
+}
+
+.home-background {
+	height: $height-small-screen;
+	@media (min-width: $breakpoint-navbar) {
+		height: $height-large-screen;
+	}
+}
+
+.header-background {
+	background-color: rgba(13, 34, 59, 0.25);
+	margin-top: 60px;
+}
+
+.m-auto {
+	margin: auto;
+}
+
+.bloc-actualites {
+	position: relative;
+	background-color: rgba(13, 34, 59, 0.40);
+	padding: 10px 20px 10px 10px;
+	margin: 10px;
+	@media(min-width: $breakpoint-navbar) {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+	@media (max-width: $breakpoint-navbar) {
+		margin: 0;
+		background-color: rgba(13, 34, 59, 0.25);
+	}
+}
+
+.blocs-chiffres-action {
+	margin: 0;
+}
+
+.titre-actualites {
+	font-size: 18px;
+}
+
+.logo-bottom-left {
+	position: relative;
+	@media(min-width: $breakpoint-navbar) {
+		position: absolute;
+		bottom: 0;
+		padding: 10px;
+		img {
+			padding:10px;
+			float: left;
+			height: 120px;
+		}
+	}
+	@media(max-width: $breakpoint-navbar) {
+		img {
+			max-width: 100vw;
+			width: auto;
+			padding:10px;
+			float: left;
+		}
+	}
+}
+
+.bottom-left {
+	position: absolute;
+	bottom: 0px;
+	padding: 10px;
+	//img {
+	//	width: 95%;
+	//}
+	img {
+		padding:10px;
+		float: left;
+		height: 120px;
+	}
+	div {
+		padding: 0px 0px 0px 20px;
+	}
+}
+
+.bottom-right {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	padding:10px;
+	img {
+		padding:10px;
+		float: right;
+		height: 120px;
+	}
+}
+
+.cookie-dialog{
+	position: fixed;
+	z-index:3;
+    padding:10px;
+	margin: auto;
+	bottom: 1em;
+	right: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #0D223B;
+	border: 1px solid #0D223B;
+    //max-height: 10%;
+	height: auto;
+	width: 98%;
+	div{
+		font-size: 1.1em;
+	}
+	button {
+		background-color: #0D223B;
+		border: 1px solid transparent;
+		color: white;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+}
+
+.paper {
+	height: auto;
+	background: transparent ;border-radius: 10px;
+	padding: 1.5rem;
+	border: 2px solid #eeeeee;
+
+	.head {
+		border-bottom: 3px solid #d4e6e6;
+		padding: 15px;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.footer {
+		button {
+			padding: 1rem;
+		}
+	}
+	.type {
+		color: #6c757d;
+	}
+}
+
+
+.graph-container-fo {
+    margin: 0;
+}
+
+.bg-light-grey {
+	background-color: #eeeeee!important;
+	color: #000;
+}
+
+
+.vignette-info-action-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.vignette-info-action-cell {
+	display: flex;
+	flex-direction: column;
+	padding: 0 30px;
+}
+
+.axis-button {
+	margin-top: 15px;
+}
+
+.vignette-info-action {
+	padding: 0!important;
+	height: 100%;
+	background-color: #eeeeee!important;
+	@media(max-width: $breakpoint-navbar) {
+		margin-bottom: 5px;
+	}
+}
+
+.info-action {
+	min-height: 30px;
+	height: 100%;
+	padding: 10px;
+	display: flex !important;
+	align-items: center;
+}
+
+.vignetteGraphique{
+	margin: 0 15px;
+	padding: 0!important;
+}
+
+.vignetteGraphique .part1 {
+    height: 56px!important;
+    display: flex !important;
+    align-items: center;
+}
+.vignetteGraphique .part2 {
+    border-radius: 0 0 10px 10px;
+    border: 2px solid #eeeeee;
+    background-color: white!important;
+}
+
+.vignetteGraphique .titre{
+    margin-left: 20px;
+}
+
+.ml-20 {
+	margin-left: 20px;
+}
+
+.mr-20 {
+	margin-right: 20px;
+}
+
+.mt-20 {
+	margin-top: 20px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}

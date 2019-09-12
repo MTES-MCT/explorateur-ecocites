@@ -1,0 +1,80 @@
+/*!
+ * Explorateur Écocités
+ * Copyright (C) 2019 l'État, ministère chargé du logement
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+#map-canvas-main-map{
+  position: relative;
+  width: 100%;
+  height: 77vh;
+}
+#map-canvas-modal {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+}
+
+.map-action--modal {
+  height: 100%;
+  overflow: hidden;
+}
+
+#filter-regions {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  width: 230px;
+}
+
+img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png"] {
+  display: none;
+}
+
+.gm-style-iw { margin-left: 10px; }
+
+#map-section .largeMap {
+  height: 77vh;
+  padding: 10px 5px 10px 10px;
+  background-color: transparent;
+}
+
+#map-section .colonneMap {
+  @media (min-width: 990px) {
+    height: 77vh;
+  }
+  @media (max-width: 989px) {
+    height: 48vh;
+  }
+}
+
+#map-section .colonneMap > div {
+  @media (min-width: 990px) {
+    height: 50%;
+    padding: 10px 10px 5px 5px;
+    position: relative;
+  }
+  @media (max-width: 989px) {
+    height: 100%;
+  }
+}
+.image-reunion-bg{
+  background-size: cover!important;
+  background: url(/img/cartes/reunionHomeResized.jpg) no-repeat 50% 50%;
+  height:100%;
+  margin:0 0 5px 0;
+}
+.image-metropole-bg{
+  background-size: cover!important;
+  background: url(/img/cartes/franceHome.jpg) no-repeat 50% 50%;
+  height:100%;
+  @media (max-width: 990px) {
+    margin:0 0 5px 0;
+  }
+
+}

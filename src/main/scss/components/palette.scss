@@ -1,0 +1,457 @@
+/*!
+ * Explorateur Écocités
+ * Copyright (C) 2019 l'État, ministère chargé du logement
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.bg-blue {
+    background: #313980 !important;
+}
+
+.bg-yellow {
+    background: #f0aa00 !important;
+}
+
+.bg-orange {
+    background: #f08c05 !important;
+}
+
+.bg-white {
+    background: #fff !important;
+}
+
+.bg-grey {
+    background: #f7f7f7 !important;
+}
+
+.bg-white-opa {
+    background: rgba(255, 255, 255, 0.85) !important;
+}
+
+.bg-grey-opa {
+    background: rgba(247, 247, 247, 0.9) !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.ft-blue {
+    color: #313980;
+}
+
+.ft-blue-2 {
+    color: #0050aa;
+}
+
+.ft-yellow {
+    color: #f0aa00 !important;
+}
+
+.ft-orange {
+    color: #f08c05;
+}
+
+.ft-grey {
+    color: #f7f7f7;
+}
+
+.ft-grey-50 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.ft-black {
+    color: #000;
+}
+
+.ft-white {
+    color: #fff !important;
+}
+
+.w-light {
+    font-weight: 100;
+}
+
+.w-normal {
+    font-weight: 400;
+}
+
+.w-bold {
+    font-weight: 600;
+}
+
+.w-black {
+    font-weight: 900;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-13 {
+    font-size: 13px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-21 {
+    font-size: 21px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+.fs-28 {
+    font-size: 28px;
+}
+
+.fs-30 {
+    font-size: 30px;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-36 {
+    font-size: 36px;
+}
+
+.fs-42 {
+    font-size: 42px;
+}
+
+.fs-54 {
+    font-size: 54px;
+}
+
+.ff-1 {
+    font-family: "Open Sans", sans-serif !important;
+}
+
+.ff-2 {
+    font-family: "Poppins", sans-serif !important;
+}
+
+.t-a-center {
+    text-align: center !important;
+}
+
+.t-a-left {
+    text-align: left;
+}
+
+.t-a-right {
+    text-align: right;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.m-t-0 {
+    margin-top: 0px;
+}
+
+.m-b-0 {
+    margin-bottom: 0px;
+}
+
+.m-l-0 {
+    margin-left: 0px;
+}
+
+.m-r-0 {
+    margin-right: 0px;
+}
+
+.m-0 {
+    margin: 0px;
+}
+
+.m-t-10 {
+    margin-top: 10px;
+}
+
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.m-l-10 {
+    margin-left: 10px;
+}
+
+.m-r-10 {
+    margin-right: 10px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.m-r-15 {
+    margin-right: 15px;
+}
+
+.m-l-15 {
+    margin-left: 15px;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-l-20 {
+    margin-left: 20px;
+}
+
+.m-r-20 {
+    margin-right: 20px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.m-t-30 {
+    margin-top: 30px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
+}
+
+.m-l-30 {
+    margin-left: 30px;
+}
+
+.m-r-30 {
+    margin-right: 30px;
+}
+
+.m-30 {
+    margin: 30px;
+}
+
+.p-r-0 {
+    padding-right: 0px;
+}
+
+.p-l-0 {
+    padding-left: 0px;
+}
+
+.p-t-0 {
+    padding-top: 0px;
+}
+
+.p-b-0 {
+    padding-bottom: 0px;
+}
+
+.p-0 {
+    padding: 0px;
+}
+
+.p-r-10 {
+    padding-right: 10px;
+}
+
+.p-l-10 {
+    padding-left: 10px;
+}
+
+.p-t-10 {
+    padding-top: 10px;
+}
+
+.p-b-10 {
+    padding-bottom: 10px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-r-20 {
+    padding-right: 20px;
+}
+
+.p-l-20 {
+    padding-left: 20px;
+}
+
+.p-t-20 {
+    padding-top: 20px;
+}
+
+.p-b-20 {
+    padding-bottom: 20px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+.p-r-30 {
+    padding-right: 30px;
+}
+
+.p-l-30 {
+    padding-left: 30px;
+}
+
+.p-t-30 {
+    padding-top: 30px;
+}
+
+.p-b-30 {
+    padding-bottom: 30px;
+}
+
+.p-30 {
+    padding: 30px;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.cursorDefault {
+    cursor: default;
+}
+
+.bt {
+    line-height: 1.3em;
+    padding: 15px 80px;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    border: 0;
+    border-radius: 6px;
+}
+
+.bt-green {
+    background-color: #7bb43f;
+}
+
+.img-align-center {
+    position: absolute;
+    margin: auto !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.img-legend-fo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 325px;
+}
+
+.img-legend-action-fo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+}
+
+// Les blocs actions dans la modal Écocités font tous la même taille et on limite le titre à deux lignes
+.list-action {
+    .modal-li {
+        height: 80px;
+        .modal-li-btn {
+            height: 80px;
+            span {
+                max-height: 36px;
+                line-height: 18px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+                word-wrap: break-word;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+.map-placeholder {
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.map-placeholder p {
+    width: auto;
+    margin: auto;
+}
+
+.loaded .map-placeholder {
+    display: none;
+}
+
+.loading .map-component {
+    visibility: hidden;
+}
+
+
+.map-component {
+    width: 100%;
+    height: 100%;
+    background-color: #dbe1ed;
+}

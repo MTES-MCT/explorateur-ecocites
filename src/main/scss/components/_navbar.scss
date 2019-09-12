@@ -1,0 +1,195 @@
+/*!
+ * Explorateur Écocités
+ * Copyright (C) 2019 l'État, ministère chargé du logement
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+.navbar-header{
+  @media (min-width: 1080px) { width: 13%; }
+  @media (max-width: 1079px) { width: 100%; }
+}
+
+.navbar-inverse .navbar-toggle {
+  background-color: #7fb72f;
+  border-color: #7fb72f;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
+  background-color: #7fb72f;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus{
+  color: black;
+}
+
+.ecocite-logo--navbar{
+	width: 450px;
+	height: 0;
+	margin: $navbar-padding-vertical ($navbar-padding-horizontal*2) $navbar-padding-vertical $navbar-padding-horizontal;
+	padding-top: $navbar-padding-vertical;
+	background-image: url('/img/brand/logo_explorateur.png');
+}
+
+.link-with-icon--navbar{
+	width: 100%;
+	padding: $navbar-height/2 0;
+	border-left: 1px solid $charcoal;
+}
+
+.icon-link--navbar{
+	display: block;
+	//width: 200px;
+	height: $navbar-height/2 + 3;
+	// (we ass 3 as a dirty hack to increse border)
+	margin: 0 auto 0 40%;
+	background-size: contain;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+}
+
+.icon-link--navbar---map{
+	//background: url('/img/icons/ecocite_pue_map.svg') no-repeat;
+  width: 65px;
+}
+.icon-link--navbar---search{
+	background: url('/img/icons/home/rechercher.svg') no-repeat;
+}
+.icon-link--navbar---login{
+	background: url('/img/icons/home/login.svg') no-repeat;
+}
+.icon-link--navbar---map{
+	background: url('/img/icons/home/map.svg') no-repeat;
+}
+.icon-link--navbar---action{
+	background: url('/img/icons/home/action.svg') no-repeat;
+}
+.icon-link--navbar---link{
+    width: 100%;
+}
+
+
+.nav-pills {
+  > li {
+    float: left;
+
+    // Links rendered as pills
+    > a {
+      border-radius: $nav-pills-border-radius;
+    }
+    + li {
+      margin-left: 2px;
+    }
+
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $brand-primary;
+        background-color: $nav-pills-active-link-hover-bg;
+      }
+    }
+  }
+}
+
+.navbar{
+    background-color: #fff;
+    border-top: none;
+
+    a{
+      transition: all 0.5s ease-in-out;
+    }
+}
+
+.navbar-nav--icons {
+    width: 800px;
+}
+.icon-link--wrapper{
+    width: 20%;
+    &.link-show-more {
+        width: 20%;
+        .icon-link--navbar {
+            //width: 140px;
+          width: 100%;
+        }
+    }
+}
+
+.link-with-icon--navbar{
+    padding-top: $navbar-height/4;
+    padding-bottom: $navbar-height/4;
+    text-align: center;
+    color: $right-menu-color;
+}
+
+@media (max-width: 1079px) {
+  .ecocite-logo--navbar {
+    width: auto;
+    max-width: 90%;
+    min-width: 70%;
+  }
+
+  .navbar-inverse .navbar-collapse.collapse.in, .navbar-collapse.collapsing{
+    float: inherit;
+    overflow-y: inherit;
+    width: 100%;
+  }
+
+  .navbar-collapse.collapsing {
+    overflow: hidden !important;
+  }
+
+  .navbar-fixed-top .navbar-collapse {
+    max-height: 100%;
+  }
+
+  .icon-link--navbar {
+    margin: 0;
+    width: 5%;
+    display: inline-block;
+  }
+  .link-with-icon--navbar{
+    border: none;
+    justify-content: center;
+    display: flex !important;
+  }
+
+  .icon-link--navbar---link {
+    width: auto !important;
+  }
+
+  .nav > li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #000;
+  }
+
+  .nav > li:last-child {
+    border-bottom: 0px;
+  }
+
+  .navbar-nav {
+    margin: 0 -10px;
+  }
+
+  .ecocite-logo--hero {
+    height: 20vh;
+    //background-position: center;
+  }
+  p.hero-description {
+    color: #fff !important;
+    font-size: 1em !important;
+  }
+  p.title {
+    font-size: 1.5em !important;
+  }
+
+  .bottom-left img {
+    height: 100px !important;
+  }
+}

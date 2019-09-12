@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Explorateur Écocités
+  ~ Copyright (C) 2019 l'État, ministère chargé du logement
+  ~
+  ~ This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<annuaire xmlns="http://cerbere.application.i2/schemas/CerbereBouchonSchema/2"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://cerbere.application.i2/schemas/CerbereBouchonSchema/2 referentiel.xsd">
+    <entites racine="fr">
+        <entite nom="equipement">
+            <entite nom="AC">
+                <entite nom="SG" estUnService="1">
+                    <entite nom="A">
+                        <entite nom="A3">
+                            <utilisateurs>
+                                <utilisateur mel="admin@explorateur.ecocites.logement.gouv.fr">
+                                    <civilite>M</civilite>
+                                    <nom>Dmin</nom>
+                                    <prenom>Adam</prenom>
+                                    <identifiant>admin</identifiant>
+                                    <passe>bouchon</passe>
+                                    <matricule>EQUTRH000000001</matricule>
+                                    <tel>+33 111111111</tel>
+                                    <mobile>+33 666666666</mobile>
+                                    <fax>+33 122222222</fax>
+                                    <bureau>B01</bureau>
+                                </utilisateur>
+                            </utilisateurs>
+                        </entite>
+                        <entite nom="A1">
+                            <utilisateurs>
+                                <utilisateur mel="admintech@explorateur.ecocites.logement.gouv.fr">
+                                    <civilite>M</civilite>
+                                    <nom>Admin</nom>
+                                    <prenom>Tech</prenom>
+                                    <identifiant>admin_tech</identifiant>
+                                    <passe>bouchon</passe>
+                                    <matricule>EQUTRH000000010</matricule>
+                                    <tel>+33 111111111</tel>
+                                    <mobile>+33 666666666</mobile>
+                                    <fax>+33 122222222</fax>
+                                    <bureau>B01</bureau>
+                                </utilisateur>
+                            </utilisateurs>
+                        </entite>
+                        <entite nom="A2">
+                            <utilisateurs>
+                                <utilisateur mel="accompagnateur@explorateur.ecocites.logement.gouv.fr">
+                                    <civilite>F</civilite>
+                                    <nom>Compagnateur</nom>
+                                    <prenom>Alice</prenom>
+                                    <identifiant>accompagnateur</identifiant>
+                                    <passe>bouchon</passe>
+                                    <matricule>EQUTRH000000002</matricule>
+                                    <tel>+33 111111111</tel>
+                                    <mobile>+33 666666666</mobile>
+                                    <fax>+33 122222222</fax>
+                                </utilisateur>
+                            </utilisateurs>
+                        </entite>
+                    </entite>
+                    <entite nom="B">
+                        <entite nom="B1">
+                            <utilisateurs>
+                                <utilisateur mel="action@explorateur.ecocites.logement.gouv.fr">
+                                    <civilite>M</civilite>
+                                    <nom>Tion</nom>
+                                    <prenom>Alain-Charles</prenom>
+                                    <identifiant>action</identifiant>
+                                    <passe>bouchon</passe>
+                                    <matricule>EQUTRH000000003</matricule>
+                                    <tel>+33 111111111</tel>
+                                    <mobile>+33 666666666</mobile>
+                                    <fax>+33 122222222</fax>
+                                </utilisateur>
+                            </utilisateurs>
+                        </entite>
+                    </entite>
+                </entite>
+            </entite>
+            <entite nom="DR">
+                <entite nom="DREAL Alsace" estUnService="1">
+                    <entite nom="A">
+                        <entite nom="A1">
+                            <utilisateurs>
+                                <utilisateur mel="ecocite@explorateur.ecocites.logement.gouv.fr">
+                                    <civilite>M</civilite>
+                                    <nom>Cocite</nom>
+                                    <prenom>Elise</prenom>
+                                    <identifiant>ecocite</identifiant>
+                                    <passe>bouchon</passe>
+                                    <matricule>EQUTRH000000004</matricule>
+                                    <tel>+33 111111111</tel>
+                                    <mobile>+33 666666666</mobile>
+                                    <fax>+33 122222222</fax>
+                                </utilisateur>
+                            </utilisateurs>
+                        </entite>
+                    </entite>
+                </entite>
+                <entite nom="DREAL Aquitaine" estUnService="1">
+                    <entite nom="A">
+                        <entite nom="A1">
+                            <utilisateurs>
+                                <utilisateur mel="acteur@explorateur.ecocites.logement.gouv.fr">
+                                    <civilite>F</civilite>
+                                    <nom>Cteur</nom>
+                                    <prenom>Arya</prenom>
+                                    <identifiant>acteur</identifiant>
+                                    <passe>bouchon</passe>
+                                    <matricule>EQUTRH000000008</matricule>
+                                    <tel>+33 111111111</tel>
+                                    <mobile>+33 666666666</mobile>
+                                    <fax>+33 122222222</fax>
+                                </utilisateur>
+                            </utilisateurs>
+                        </entite>
+                    </entite>
+                </entite>
+                <entite nom="DREAL Bretagne" estUnService="1">
+                    <entite nom="A">
+                        <entite nom="A1">
+                            <utilisateurs>
+                                <utilisateur mel="vide@explorateur.ecocites.logement.gouv.fr">
+                                    <civilite>F</civilite>
+                                    <nom>Géfroid</nom>
+                                    <prenom>Sandra</prenom>
+                                    <identifiant>sansdroit</identifiant>
+                                    <passe>bouchon</passe>
+                                    <matricule>JGAGJAGO73543</matricule>
+                                    <tel>+33 111111111</tel>
+                                    <mobile>+33 666666666</mobile>
+                                    <fax>+33 122222222</fax>
+                                </utilisateur>
+                            </utilisateurs>
+                        </entite>
+                    </entite>
+                </entite>
+            </entite>
+        </entite>
+    </entites>
+
+    <!-- L I S T E  D E S  A P P L I C A T I O N S  E T  D E  L E U R S
+        P R O F I L S -->
+    <applications>
+        <application applicationId="615">
+            <profils-app>
+                <profil-app nom="administrateur"/>
+                <profil-app nom="admin_tech"/>
+                <profil-app nom="accompagnateur"/>
+                <profil-app nom="acteur_ecocite_autre"/>
+                <profil-app nom="referent_ecocite"/>
+                <profil-app nom="porteur_action"/>
+            </profils-app>
+        </application>
+    </applications>
+
+    <!-- L I S T E  D E S  D R O I T S  S U R  L'A P P L I C A T I O N
+        Les droits sont affectÃ©s par utilisateur. Chaque utilisateur est
+        identifiÃ© de faÃ§on unique par son mel et contient plusieurs profils.
+        Un profil est caractÃ©risÃ© par :
+        - son profil d'application associÃ© [**obligatoire**]
+        - une portÃ©e de service [facultatif]
+        - une restriction libre [facultatif]
+    -->
+    <habilitations applicationId="615">
+        <habilitation mel="admin@explorateur.ecocites.logement.gouv.fr">
+            <profil nom="administrateur" />
+        </habilitation>
+        <habilitation mel="admintech@explorateur.ecocites.logement.gouv.fr">
+            <profil nom="admin_tech" />
+        </habilitation>
+        <habilitation mel="accompagnateur@explorateur.ecocites.logement.gouv.fr">
+            <profil nom="accompagnateur">
+            </profil>
+        </habilitation>
+        <habilitation mel="action@explorateur.ecocites.logement.gouv.fr">
+            <profil nom="porteur_action">
+                <restriction>A_25768_67156, A_25768_67157</restriction>
+            </profil>
+            <profil nom="PORTEUR_ACTION">
+                <restriction>A_25450</restriction>
+            </profil>
+        </habilitation>
+        <habilitation mel="ecocite@explorateur.ecocites.logement.gouv.fr">
+            <profil nom="referent_ecocite">
+                <restriction>E_243500139</restriction>
+            </profil>
+        </habilitation>
+        <habilitation mel="acteur@explorateur.ecocites.logement.gouv.fr">
+            <profil nom="acteur_ecocite_autre">
+                <restriction>R_239740012, E_243500139</restriction>
+            </profil>
+            <profil nom="porteur_action">
+                <restriction>A_25450</restriction>
+            </profil>
+        </habilitation>
+    </habilitations>
+</annuaire>
+
