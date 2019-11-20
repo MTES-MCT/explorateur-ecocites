@@ -973,6 +973,16 @@ function deleteMedia(id, idObject) {
 	});
 }
 
+function updateMarkerMapMediaForm(map, latInput, longInput) {
+	var lat = latInput.val();
+	var long = longInput.val();
+	if (lat !== '' && long !== '' && $.isNumeric(lat) && $.isNumeric(long)) {
+		map.replaceMarker(parseFloat(lat), parseFloat(long))
+	} else {
+		map.removeMarker()
+	}
+}
+
 function initMapMediaForm(latitude, longitude) {
 	var apiKey = $("#geoportailApiKey").val();
 	var latInput = $("#latInput");
@@ -996,6 +1006,12 @@ function initMapMediaForm(latitude, longitude) {
 			if (latitude && longitude) {
 				map.addMarker(latitude, longitude);
 			}
+			latInput.on('blur', function() {
+				updateMarkerMapMediaForm(map, latInput, longInput);
+			});
+			longInput.on('blur', function () {
+				updateMarkerMapMediaForm(map, latInput, longInput);
+			});
 		}
 	});
 }

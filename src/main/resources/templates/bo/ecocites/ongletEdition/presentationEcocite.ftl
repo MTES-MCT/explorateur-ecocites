@@ -9,6 +9,7 @@
 <#-- @ftlvariable name="imagesPrincipales" type="java.util.List<com.efficacity.explorateurecocites.beans.model.Media>" -->
 <#-- @ftlvariable name="imagesSecondaires" type="java.util.List<com.efficacity.explorateurecocites.beans.model.Media>" -->
 <#-- @ftlvariable name="ajarisStatus" type="java.lang.String" -->
+<#-- @ftlvariable name="ajarisLoginUrl" type="java.lang.String" -->
 
 <span style="font-size: 0.9rem; color: #83b93a; padding-left: 2rem;">&nbsp;</span>
 <#if ajarisStatus == "FINISHED">
@@ -226,6 +227,24 @@
                 </div>
             </div>
             <div class="col-lg-6">
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="photoPrin"><strong>Accès à la médiathèque ÉcoCité</strong></label>
+                        <#if ajarisLoginUrl?? && ajarisLoginUrl?hasContent >
+                            <a
+                                    href="${ajarisLoginUrl}"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="btn btn-outline-primary btn-block" style="width:96.4%"
+                            >
+                                Accédez
+                            </a>
+                        <#else>
+                            <button class="btn btn-outline-primary btn-block disabled" style="width:96.4%" disabled>
+                                Accédez
+                            </button>
+                        </#if>
+                    </div>
+                </div>
                 <div class="form-row">
                     <div class="form-group col-lg-6">
                         <#assign hasImagePrincipale = imagesPrincipales?? && imagesPrincipales?hasContent>

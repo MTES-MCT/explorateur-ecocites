@@ -185,20 +185,24 @@
                 </script>
             </div>
             <div class="col-lg-6">
-                <#if ajarisLoginUrl?? && ajarisLoginUrl?hasContent >
                 <div class="form-row">
                     <div class="form-group col-lg-6">
-                        <label for="photoPrin"><strong>Accèder à la bibliothèque d'image Terra</strong></label>
-                        <a
-                           href="${ajarisLoginUrl}"
-                           target="_blank" rel="noopener noreferrer"
-                           class="btn btn-outline-primary btn-block" style="width:96.4%"
-                        >
-                            Cliquez ici pour accèder à Terra
-                        </a>
+                        <label for="photoPrin"><strong>Accès à la médiathèque ÉcoCité</strong></label>
+                        <#if ajarisLoginUrl?? && ajarisLoginUrl?hasContent >
+                            <a
+                               href="${ajarisLoginUrl}"
+                               target="_blank" rel="noopener noreferrer"
+                               class="btn btn-outline-primary btn-block" style="width:96.4%"
+                            >
+                                Accédez
+                            </a>
+                        <#else>
+                            <button class="btn btn-outline-primary btn-block disabled" style="width:96.4%" disabled>
+                                Accédez
+                            </button>
+                        </#if>
                     </div>
                 </div>
-                </#if>
                 <div class="form-row">
                     <div class="form-group col-lg-6">
                         <#assign hasImagePrincipale = imagesPrincipales?? && imagesPrincipales?hasContent>

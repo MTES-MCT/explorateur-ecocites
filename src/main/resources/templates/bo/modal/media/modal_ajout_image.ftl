@@ -32,7 +32,7 @@
                             <label for="exampleFormControlSelect1"><strong>Comment voulez vous créer l'image</strong></label>
                             <select class="form-control" id="selectMediaFormType">
                                 <option value="empty"></option>
-                                <option value="ajaris">Depuis une image existante Terra</option>
+                                <option value="ajaris">Depuis une image existante dans la médiathèque ÉcoCité</option>
                                 <option value="scratch">Télécharger une image depuis mon ordinateur</option>
                             </select>
                         </div>
@@ -42,7 +42,7 @@
                 <div id="form-ajaris">
                     <div class="row">
                         <div class="form-group col-12">
-                            <label for="title"><strong>Id Terra de l'image *</strong></label> <br/>
+                            <label for="title"><strong>IdDocument de l'image dans la médiathèque Écocité *</strong></label> <br/>
                             <input id='idAjaris' type="text" name="title" class="form-control"/>
                             <p class="text-danger" style="display : none;"></p>
                         </div>
@@ -97,12 +97,12 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <label for="lieu"><strong>Latitude *</strong></label> <br/>
-                            <input id='latInput' type="text" name="latitude" class="form-control form-ajaris-field" required readonly />
+                            <input id='latInput' type="text" name="latitude" class="form-control form-ajaris-field" required/>
                             <p class="text-danger" style="display : none;"></p>
                         </div>
                         <div class="form-group col-6">
                             <label for="lieu"><strong>Longitude *</strong></label> <br/>
-                            <input id='longInput' type="text" name="longitude" class="form-control form-ajaris-field" required readonly />
+                            <input id='longInput' type="text" name="longitude" class="form-control form-ajaris-field" required/>
                             <p class="text-danger" style="display : none;"></p>
                         </div>
                         <div class="col-12">
@@ -124,16 +124,16 @@
                         <div class="form-group col-12">
                             <label for="uniteIndicateur"><strong>Autorisation de diffusion</strong></label> <br/>
                             <p>Dans le cadre de la médiatisation de la démarche ÉcoCité, nous autorisons le ministère de la Transition écologique et solidaire (MTES)
-                                et le ministère de la Cohésion des territoires (MCT) ainsi que leurs partenaires institutionnels à utiliser et diffuser à titre gratuit
+                                et le ministère de la Cohésion des territoires et des relations avec les collectivités territoriales (MCTRCT) ainsi que leurs partenaires institutionnels à utiliser et diffuser à titre gratuit
                                 et non exclusif les photographies enregistrées au sein de l'Explorateur ÉcoCités. Ces clichés seront exploités à titre exclusif par les
                                 ministères dans le cadre de la médiatisation de la démarche ÉcoCité. Les photographies susmentionnées sont susceptibles d’être reproduites
                                 sur les supports suivants :
                             </p>
                             <ul>
                                 <li>Publication de dossiers de presse</li>
-                                <li>Publication dans une revue, ouvrage ou journal dont la publication est coordonnée par les MTES/MCT</li>
+                                <li>Publication dans une revue, ouvrage ou journal dont la publication est coordonnée par les MTES/MCTRCT</li>
                                 <li>Présentation au public lors d’expositions dédiées à la ville durable organisées par les ministères et leurs partenaires institutionnels </li>
-                                <li>Diffusion sur le site web, internet et extranet des MTES/MCT et ses partenaires institutionnels</li>
+                                <li>Diffusion sur le site web, internet et extranet des MTES/MCTRCT et ses partenaires institutionnels</li>
                                 <li>Diffusion sur le site web « Explorateur ÉcoCités »</li>
                                 <li>Diffusion sur tout autre support multimédia</li>
                             </ul>

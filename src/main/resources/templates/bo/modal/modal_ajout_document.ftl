@@ -209,7 +209,7 @@
                             <div class="form-group col-12">
                                 <label for="uniteIndicateur"><strong>Autorisation de diffusion</strong></label> </br>
                                 <p>Dans le cadre de la médiatisation de la démarche ÉcoCité, nous autorisons le ministère de la Transition écologique et solidaire (MTES)
-                                    et le ministère de la Cohésion des territoires (MCT) ainsi que leurs partenaires institutionnels à utiliser et diffuser à titre gratuit
+                                    et le ministère de la Cohésion des territoires et des relations avec les collectivités territoriales (MCTRCT) ainsi que leurs partenaires institutionnels à utiliser et diffuser à titre gratuit
                                     et non exclusif les photographies enregistrées au sein de l'Explorateur ÉcoCités. Ces clichés seront exploités à titre exclusif par les
                                     ministères dans le cadre de la médiatisation de la démarche ÉcoCité. Les photographies susmentionnées sont susceptibles d’être reproduites
                                     sur les supports suivants :
@@ -217,11 +217,11 @@
                                 <input id="presse" type="checkbox" <#if AFFICHAGE=="EDITION" && fileUpload.autorisationpresse?? && fileUpload.autorisationpresse>checked<#elseIf AFFICHAGE=="CREATION" >checked</#if>>
                                 <label for="presse"> Publication de dossiers de presse</label><br/>
                                 <input id="revue" type="checkbox" <#if AFFICHAGE=="EDITION" && fileUpload.autorisationrevue?? && fileUpload.autorisationrevue>checked</#if>
-                                <label for="revue"> Publication dans une revue, ouvrage ou journal dont la publication est coordonnée par les MTES/MCT</label><br/>
+                                <label for="revue"> Publication dans une revue, ouvrage ou journal dont la publication est coordonnée par les MTES/MCTRCT</label><br/>
                                 <input id="expo" type="checkbox" <#if AFFICHAGE=="EDITION" && fileUpload.autorisationexpo?? && fileUpload.autorisationexpo>checked</#if>>
                                 <label for="expo"> Présentation au public lors d’expositions dédiées à la ville durable organisées par les ministères et leurs partenaires institutionnels </label><br/>
                                 <input id="internet" type="checkbox" <#if AFFICHAGE=="EDITION" && fileUpload.autorisationinternet?? && fileUpload.autorisationinternet>checked</#if>>
-                                <label for ="internet">  Diffusion sur le site web, internet et extranet des MTES/MCT et ses partenaires institutionnels</label><br/>
+                                <label for ="internet">  Diffusion sur le site web, internet et extranet des MTES/MCTRCT et ses partenaires institutionnels</label><br/>
                                 <input id="siteEE" type="checkbox" <#if AFFICHAGE=="EDITION" && fileUpload.autorisationsiteee?? && fileUpload.autorisationsiteee>checked</#if>>
                                 <label for="siteEE"> Diffusion sur le site web « Explorateur ÉcoCités »</label><br/>
                                 <input id="supportMM" type="checkbox" <#if AFFICHAGE=="EDITION" && fileUpload.autorisationsupportmm?? && fileUpload.autorisationsupportmm>checked</#if>>

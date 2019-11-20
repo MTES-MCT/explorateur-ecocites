@@ -73,12 +73,12 @@
                     <div class="row">
                         <div class="form-group col-6">
                             <label for="lieu"><strong>Latitude *</strong></label> <br/>
-                            <input id='latInput' type="text" name="latitude" class="form-control form-ajaris-field" data-type="float" required readonly <#if media?? && media.latitude??>value="${media.latitude?c}"</#if> />
+                            <input id='latInput' type="text" name="latitude" class="form-control form-ajaris-field" data-type="float" required <#if media?? && media.latitude??>value="${media.latitude?c}"</#if> />
                             <p class="text-danger" style="display : none;"></p>
                         </div>
                         <div class="form-group col-6">
                             <label for="lieu"><strong>Longitude *</strong></label> <br/>
-                            <input id='longInput' type="text" name="longitude" class="form-control form-ajaris-field" data-type="float" required readonly <#if media?? && media.longitude??>value="${media.longitude?c}"</#if> />
+                            <input id='longInput' type="text" name="longitude" class="form-control form-ajaris-field" data-type="float" required <#if media?? && media.longitude??>value="${media.longitude?c}"</#if> />
                             <p class="text-danger" style="display : none;"></p>
                         </div>
                         <div class="col-12">
@@ -105,16 +105,16 @@
                         <div class="form-group col-12">
                             <label><strong>Autorisation de diffusion</strong></label> <br/>
                             <p>Dans le cadre de la médiatisation de la démarche ÉcoCité, nous autorisons le ministère de la Transition écologique et solidaire (MTES)
-                                et le ministère de la Cohésion des territoires (MCT) ainsi que leurs partenaires institutionnels à utiliser et diffuser à titre gratuit
+                                et le ministère de la Cohésion des territoires et des relations avec les collectivités territoriales (MCTRCT) ainsi que leurs partenaires institutionnels à utiliser et diffuser à titre gratuit
                                 et non exclusif les photographies enregistrées au sein de l'Explorateur ÉcoCités. Ces clichés seront exploités à titre exclusif par les
                                 ministères dans le cadre de la médiatisation de la démarche ÉcoCité. Les photographies susmentionnées sont susceptibles d’être reproduites
                                 sur les supports suivants :
                             </p>
                             <ul>
                                 <li>Publication de dossiers de presse</li>
-                                <li>Publication dans une revue, ouvrage ou journal dont la publication est coordonnée par les MTES/MCT</li>
+                                <li>Publication dans une revue, ouvrage ou journal dont la publication est coordonnée par les MTES/MCTRCT</li>
                                 <li>Présentation au public lors d’expositions dédiées à la ville durable organisées par les ministères et leurs partenaires institutionnels </li>
-                                <li>Diffusion sur le site web, internet et extranet des MTES/MCT et ses partenaires institutionnels</li>
+                                <li>Diffusion sur le site web, internet et extranet des MTES/MCTRCT et ses partenaires institutionnels</li>
                                 <li>Diffusion sur le site web « Explorateur ÉcoCités »</li>
                                 <li>Diffusion sur tout autre support multimédia</li>
                             </ul>
