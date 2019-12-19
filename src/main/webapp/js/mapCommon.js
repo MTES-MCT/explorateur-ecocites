@@ -9,6 +9,11 @@
  * You should have received a copy of the GNU Affero General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
  */
 
+var DEFAULTS = {
+	LATITUDE: 46.817621,
+	LONGITUDE: 3.009651
+};
+
 function createMap(target, placeholder, overlay) {
 	var mapInstance = {
 		target: target
@@ -82,7 +87,7 @@ function createMap(target, placeholder, overlay) {
 				})
 			} else {
 				mapInstance.optMap.view = new ol.View({
-					center: ol.proj.transform([2.348785, 48.853402], 'EPSG:4326', 'EPSG:3857'),
+					center: ol.proj.transform([DEFAULTS.LONGITUDE, DEFAULTS.LATITUDE], 'EPSG:4326', 'EPSG:3857'),
 					zoom: zoom || 5,
 					minZoom: 2,
 					maxZoom: 18
@@ -162,16 +167,37 @@ function createMap(target, placeholder, overlay) {
 			}
 		},
 
-		replaceMarker: function replaceMarker(latitude, longitude, content) {
+		replaceMarker: function replaceMarker(latitude, longitude, content, center) {
 			if (mapInstance.olMap) {
 				mapInstance.markerVectorSource.clear();
 				this.addMarker(latitude, longitude, content);
+				if (center) {
+					this.center(latitude, longitude)
+				}
 			}
 		},
 
-		removeMarker: function removeMarker() {
+		removeMarker: function removeMarker(center) {
 			if (mapInstance.olMap) {
 				mapInstance.markerVectorSource.clear();
+				if (center) {
+					this.center()
+				}
+			}
+		},
+
+		center: function center(latitude, longitude) {
+			if (mapInstance.olMap) {
+				if (mapInstance.kmlLayers.length <= 0) {
+					var mapView = mapInstance.olMap.getView();
+					if (latitude && longitude) {
+						mapView.setCenter(ol.proj.transform([longitude, latitude], 'EPSG:4326', 'EPSG:3857'));
+						mapView.setZoom(12);
+					} else {
+						mapView.setCenter(ol.proj.transform([DEFAULTS.LONGITUDE, DEFAULTS.LATITUDE], 'EPSG:4326', 'EPSG:3857'));
+						mapView.setZoom(5);
+					}
+				}
 			}
 		},
 

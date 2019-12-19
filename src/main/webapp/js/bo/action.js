@@ -1175,44 +1175,45 @@ function ajoutIndicateurMesure(type) {
 function afficheCarteOnLoad() {
 	document.getElementById('map').innerHTML = "";
 	var hasPerimetre = $("#hasPerimetreAction").val();
-	var latitude = parseFloat($("#latitudeAction").val().replace(",", "."));
-	var longitude = parseFloat($("#longitudeAction").val().replace(",", "."));
+	var latitudeElt = $("#latitudeAction");
+	var longitudeElt = $("#longitudeAction");
+	var latitude = parseFloat(latitudeElt.val().replace(",", "."));
+	var longitude = parseFloat(longitudeElt.val().replace(",", "."));
 	var perimetreUrl = $("#perimetreUrlAction").val();
 	var nomPublic = $("#nomPublicAction").val();
 	var apiKey = $("#geoportailApiKey").val();
-	if ((latitude && longitude) || hasPerimetre) {
-		Gp.Services.getConfig({
-			apiKey: apiKey,
-			onSuccess: function () {
-				var map = createMap("map", "mapPlaceHolder");
-				map.initialize(latitude, longitude);
-				if (hasPerimetre) {
-					map.addKml(perimetreUrl);
-				}
-				if (latitude && longitude) {
-					map.addMarker(latitude, longitude, nomPublic);
-				}
-				$(".updateMap").blur(
-					function () {
-						var lat = $("input[name='latitude']").val().replace(',', '.');
-						var long = $("input[name='longitude']").val().replace(',', '.');
-						if (lat !== '' && long !== '' && $.isNumeric(lat) && $.isNumeric(long)) {
-							map.replaceMarker(parseFloat(lat), parseFloat(long), nomPublic)
-						} else if (lat === '' && long === '') {
-							map.removeMarker()
-						} else {
-							map.destroy()
-						}
-					}
-				);
-				map.addOnClickListener(function (latitude, longitude) {
-					map.replaceMarker(latitude, longitude);
-					$("input[name='latitude']").val(latitude).blur();
-					$("input[name='longitude']").val(longitude).blur();
-				});
+	Gp.Services.getConfig({
+		apiKey: apiKey,
+		onSuccess: function () {
+			var map = createMap("map", "mapPlaceHolder");
+			map.initialize(latitude, longitude);
+			if (hasPerimetre) {
+				map.addKml(perimetreUrl);
 			}
-		});
-	}
+			if (latitude && longitude) {
+				map.addMarker(latitude, longitude, nomPublic);
+			}
+			$(".updateMap").blur(
+				function () {
+					var lat = latitudeElt.val().replace(',', '.');
+					var long = longitudeElt.val().replace(',', '.');
+					if (lat !== '' && long !== '' && $.isNumeric(lat) && $.isNumeric(long)) {
+						map.replaceMarker(parseFloat(lat), parseFloat(long), nomPublic, true)
+					} else if (lat === '' || long === '') {
+						map.removeMarker(true);
+					}
+				}
+			);
+			map.addOnClickListener(function (latitude, longitude) {
+				map.replaceMarker(latitude, longitude, nomPublic, false);
+				latitudeElt.val(latitude);
+				longitudeElt.val(longitude);
+				saveAttribut(latitudeElt, latitude, function() {
+					saveAttribut(longitudeElt, longitude);
+				});
+			});
+		}
+	});
 }
 
 var contactImp = undefined;

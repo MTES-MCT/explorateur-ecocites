@@ -897,46 +897,46 @@ function afficheOnloadCarte() {
 	var hasPerimetreOperationnel= $("#hasPerimetreOperationnelEcocite").val();
 	var perimetreStrategiqueUrl = $("#perimetreStrategiqueUrlEcocite").val();
 	var perimetreOperationnelUrl = $("#perimetreOperationnelUrlEcocite").val();
-	var latitude = parseFloat($("#latitudeEcocite").val().replace(",", "."));
-	var longitude = parseFloat($("#longitudeEcocite").val().replace(",", "."));
+	var latitudeElt = $("#latitudeEcocite");
+	var longitudeElt = $("#longitudeEcocite");
+	var latitude = parseFloat(latitudeElt.val().replace(",", "."));
+	var longitude = parseFloat(longitudeElt.val().replace(",", "."));
 	var apiKey = $("#geoportailApiKey").val();
-
-	if ((latitude && longitude) || hasPerimetre) {
-		Gp.Services.getConfig({
-			apiKey: apiKey,
-			onSuccess: function () {
-				var map = createMap("map", "mapPlaceHolder");
-				map.initialize(latitude, longitude);
-				if (hasPerimetreStrategique) {
-					map.addKml(perimetreStrategiqueUrl);
-				}
-				if (hasPerimetreOperationnel) {
-					map.addKml(perimetreOperationnelUrl);
-				}
-				if (latitude && longitude) {
-					map.addMarker(latitude, longitude, nom);
-				}
-				$(".updateMap").blur(
-					function () {
-						var lat = $("input[name='latitude']").val().replace(',', '.');
-						var long = $("input[name='longitude']").val().replace(',', '.');
-						if (lat !== '' && long !== '' && $.isNumeric(lat) && $.isNumeric(long)) {
-							map.replaceMarker(parseFloat(lat), parseFloat(long), nom)
-						} else if (lat === '' && long === '') {
-							map.removeMarker()
-						} else {
-							map.destroy()
-						}
-					}
-				);
-				map.addOnClickListener(function (latitude, longitude) {
-					map.replaceMarker(latitude, longitude);
-					$("input[name='latitude']").val(latitude).blur();
-					$("input[name='longitude']").val(longitude).blur();
-				});
+	Gp.Services.getConfig({
+		apiKey: apiKey,
+		onSuccess: function () {
+			var map = createMap("map", "mapPlaceHolder");
+			map.initialize(latitude, longitude);
+			if (hasPerimetreStrategique) {
+				map.addKml(perimetreStrategiqueUrl);
 			}
-		});
-	}
+			if (hasPerimetreOperationnel) {
+				map.addKml(perimetreOperationnelUrl);
+			}
+			if (latitude && longitude) {
+				map.addMarker(latitude, longitude, nom);
+			}
+			$(".updateMap").blur(
+				function () {
+					var lat = latitudeElt.val().replace(',', '.');
+					var long = longitudeElt.val().replace(',', '.');
+					if (lat !== '' && long !== '' && $.isNumeric(lat) && $.isNumeric(long)) {
+						map.replaceMarker(parseFloat(lat), parseFloat(long), nom, true)
+					} else if (lat === '' || long === '') {
+						map.removeMarker()
+					}
+				}
+			);
+			map.addOnClickListener(function (latitude, longitude) {
+				map.replaceMarker(latitude, longitude, nom, false);
+				latitudeElt.val(latitude);
+				longitudeElt.val(longitude);
+				saveAttribut(latitudeElt, latitude, function() {
+					saveAttribut(longitudeElt, longitude);
+				});
+			});
+		}
+	});
 }
 
 var contactImp=undefined;

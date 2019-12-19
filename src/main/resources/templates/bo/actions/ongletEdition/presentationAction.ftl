@@ -464,14 +464,14 @@
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="latitude"><strong>Latitude</strong> <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Pour obtenir la latitude et la longitude de votre projet, vous pouvez aller sur le site : https://www.geoportail.gouv.fr/carte"></i></label><br/>
-                        <input <#if canEdit?? && !canEdit>disabled </#if> type="text" id="latitude" name="latitude" value="<#if !action.latitude??>${action.latitude!}<#else>${action.latitude!}</#if>"
+                        <input id="latitudeAction" <#if canEdit?? && !canEdit>disabled </#if> type="text" name="latitude" value="${action.latitude!""}"
                                class="inputSaveAuto form-control updateMap" style="width:96.4%"
                                data-objectid="${action.id!?c}" data-objectclass="Action"/>
                         <p class="text-danger" style="display : none;"></p>
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="longitude" style="margin-left: 10px "><strong>Longitude</strong> <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Pour obtenir la latitude et la longitude de votre projet, vous pouvez aller sur le site : https://www.geoportail.gouv.fr/carte"></i></label><br/>
-                        <input <#if canEdit?? && !canEdit>disabled </#if> type="text" id="longitude" name="longitude" value="<#if !action.longitude??>${action.longitude!}<#else>${action.longitude!}</#if>"
+                        <input id="longitudeAction" <#if canEdit?? && !canEdit>disabled </#if> type="text" name="longitude" value="${action.longitude!""}"
                                class="inputSaveAuto form-control updateMap" style="width:96.4%; margin-left: 10px "
                                data-objectid="${action.id!?c}" data-objectclass="Action"/>
                         <p class="text-danger" style="display : none; margin-left: 10px"></p>
@@ -504,8 +504,6 @@
     <input type="hidden" id="hasPerimetreAction" value="<#if hasPerimetre>${"true"}</#if>">
     <input type="hidden" id="nomPublicAction" value="${action.nomPublic!""}">
     <input type="hidden" id="perimetreUrlAction" value="<#if hasPerimetre && perimetre?? && perimetre.url??>${perimetre.url!}</#if>">
-    <input type="hidden" id="latitudeAction" value="${action.latitude!""}">
-    <input type="hidden" id="longitudeAction" value="${action.longitude!""}">
     <input type="hidden" id="geoportailApiKey" value="${geoportailApiKey!""}">
     <input type="hidden" id="modalContactUrl" value="<#if modalContactUrl??>'${modalContactUrl!}'<#else>#</#if>">
 </div>

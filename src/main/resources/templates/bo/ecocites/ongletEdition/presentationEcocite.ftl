@@ -426,13 +426,13 @@
                  <div class="form-row">
                     <div class="form-group col-lg-6">
                         <label for="latitude"><strong>Latitude *</strong> <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Pour obtenir la latitude et la longitude de votre projet, vous pouvez aller sur le site : https://www.geoportail.gouv.fr/carte"></i></label> </br>
-                        <input <#if canEdit?? && !canEdit >disabled </#if> type="text" name="latitude" value="<#if !ecocite.latitude??>${ecocite.latitude!}<#else>${ecocite.latitude!}</#if>"
+                        <input id="latitudeEcocite"  <#if canEdit?? && !canEdit >disabled </#if> type="text" name="latitude" value="${ecocite.latitude!""}"
                                class="inputSaveAuto form-control updateMap" style="width:96.4%" data-objectid="${ecocite.id!?c}" data-objectclass="Ecocite"/>
                         <p class="text-danger" style="display : none;"></p>
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="longitude"><strong style="margin-left: 10px">Longitude *</strong> <i class="fa fa-info-circle" data-toggle="tooltip" data-placement="top" title="Pour obtenir la latitude et la longitude de votre projet, vous pouvez aller sur le site : https://www.geoportail.gouv.fr/carte"></i></label> </br>
-                        <input <#if canEdit?? && !canEdit >disabled </#if> type="text" name="longitude" value="<#if !ecocite.longitude??>${ecocite.longitude!}<#else>${ecocite.longitude!}</#if>"
+                        <input id="longitudeEcocite"  <#if canEdit?? && !canEdit >disabled </#if> type="text" name="longitude" value="${ecocite.longitude!""}"
                                class="inputSaveAuto form-control updateMap" style="width:96.4%; margin-left: 10px " data-objectid="${ecocite.id!?c}" data-objectclass="Ecocite"/>
                         <p class="text-danger" style="display : none; margin-left: 10px"></p>
                     </div>
@@ -461,8 +461,6 @@
     <input type="hidden" id="nomPublicEcocite" value="${ecocite.nom!""}">
     <input type="hidden" id="perimetreStrategiqueUrlEcocite" value="<#if hasPerimetreStrategique && perimetreStrategique?? && perimetreStrategique.url??>${perimetreStrategique.url!""}</#if>">
     <input type="hidden" id="perimetreOperationnelUrlEcocite" value="<#if hasPerimetreOperationnel && perimetreOperationnel?? && perimetreOperationnel.url??>${perimetreOperationnel.url!""}</#if>">
-    <input type="hidden" id="latitudeEcocite" value="${ecocite.latitude!""}">
-    <input type="hidden" id="longitudeEcocite" value="${ecocite.longitude!""}">
     <input type="hidden" id="geoportailApiKey" value="${geoportailApiKey!""}">
     <input type="hidden" id="modalContactUrl" value="<#if modalContactUrl??>'${modalContactUrl!}'<#else>#</#if>">
 </div>
