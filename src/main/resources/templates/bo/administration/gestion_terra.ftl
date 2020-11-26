@@ -22,7 +22,19 @@
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
             <div id="contenuBo">
                 <div class="row">
-                    <h1>Liste de mise à jour Terra</h1>
+                    <h1 class="ft-700">Liste de mise à jour Terra</h1>
+                    <div class="col-3 my-4 ml-auto">
+                        <form method="post" action="/bo/administration/terra/refreshAll">
+                            <#if _csrf??>
+                                <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                                <input type="hidden" name="_csrf_header" value="${_csrf.headerName}"/>
+                            </#if>
+                            <button type="submit" class="collapsed btn btn-outline-danger btn-block" >
+                                <strong>Mettre à jour toutes les images</strong>
+                                <i class="fa fa-refresh mr-1"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 <div class="row">
                     <#if jobQueue?? && jobQueue?hasContent>

@@ -127,7 +127,11 @@ public class MediaController {
         if (form == null || bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(com.efficacity.explorateurecocites.utils.ValidationErrorBuilder.fromBindingErrorsIgnoreValue(bindingResult));
         } else {
-            return ResponseEntity.ok(mediaService.uploadImage(bindingResult, messageSourceService, locale, form, type, level, idObject));
+            MediaForm mediaForm = mediaService.uploadImage(bindingResult, messageSourceService, locale, form, type, level, idObject);
+            if (mediaForm == null) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+            }
+            return ResponseEntity.ok(mediaForm);
         }
     }
 
@@ -143,7 +147,7 @@ public class MediaController {
     @DeleteMapping("/bo/ajaris/edit/{idMedia}")
     public ResponseEntity delete(@PathVariable Long idMedia) {
         LOGGER.info("DELETE Media" + idMedia);
-//        mediaService.deleteMedia(idMedia);
+        mediaService.deleteMedia(idMedia);
         return ResponseEntity.ok(true);
     }
 
@@ -211,6 +215,13 @@ public class MediaController {
         model.addAttribute("currentMenu", "administration");
         model.addAttribute("currentTab", "ajaris");
         return "bo/administration/gestion_terra";
+    }
+
+    @PostMapping("/bo/administration/terra/refreshAll")
+    @PreAuthorize("hasAuthority('ROLE_ADMINISTRATEUR') OR hasAuthority('ROLE_ADMIN_TECH')")
+    public String startJobById() {
+        mediaModificationService.markAllModified();
+        return "redirect:/bo/administration/terra";
     }
 
     @PostMapping("/bo/administration/terra/job/{id}")

@@ -319,4 +319,13 @@ public class MediaModificationService extends CrudEntityService<MediaModificatio
         cloneJob.setLastModified(LocalDateTime.now());
         this.repository.save(cloneJob);
     }
+
+    public void markAllModified() {
+        for (final Action action : actionService.findAll()) {
+            this.markModified(action);
+        }
+        for (final Ecocite ecocite : ecociteService.findAll()) {
+            this.markModified(ecocite);
+        }
+    }
 }

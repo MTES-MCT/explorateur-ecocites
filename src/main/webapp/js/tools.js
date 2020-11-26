@@ -705,28 +705,33 @@ function mediaModalInitialisation() {
 
 function addAjarisImage(typeModal, level, idObject, idMedia) {
 	var select = $("#selectMediaFormType");
+	var button = $(event.target)
 	switch (select.val()) {
 		case 'empty':
 			break;
 		case 'ajaris':
-			submitMediaFormAjaris(idObject, typeModal, level);
+			button.prop("disabled", true)
+			submitMediaFormAjaris(idObject, typeModal, level, button);
 			break;
 		case 'scratch':
-			submitMediaFormFile(idObject, typeModal, level, "#mediaFormFileInput", "#form-scratch");
+			button.prop("disabled", true)
+			submitMediaFormFile(idObject, typeModal, level, "#mediaFormFileInput", "#form-scratch", button);
 			break;
 		case 'update':
-			submitMediaForm(idObject, typeModal, idMedia, "#form-scratch");
+			button.prop("disabled", true)
+			submitMediaForm(idObject, typeModal, idMedia, "#form-scratch", button);
 			break;
 	}
 }
 
-function submitMediaFormAjaris(idObject, typeModal, level) {
+function submitMediaFormAjaris(idObject, typeModal, level, button) {
 	var url = '/bo/ajaris/createId/' + typeModal + '/' + level + '/' + idObject;
 	var inputIdAjaris = $("#idAjaris");
 	var globalErrorField = $("#addMediaGlobalError");
 	var idAjaris = inputIdAjaris.val();
 	var fieldIdAjarisError = inputIdAjaris.parent().find("p.text-danger");
 	if (!idAjaris) {
+		button.prop("disabled", false)
 		fieldIdAjarisError.text("Champ obligatoire");
 		fieldIdAjarisError.show();
 	} else {
@@ -739,6 +744,7 @@ function submitMediaFormAjaris(idObject, typeModal, level) {
 			cache: false,
 			method: 'POST',
 			success: function (data) {
+				button.prop("disabled", false)
 				reloadPresentationFun(idObject)();
 				var modal = $("#modalAjoutDocument");
 				modal.on('hidden.bs.modal', function () {
@@ -748,6 +754,7 @@ function submitMediaFormAjaris(idObject, typeModal, level) {
 				modal.modal('hide');
 			},
 			error: function (errors) {
+				button.prop("disabled", false)
 				var response = errors.responseJSON;
 				if (response && response.fieldErrors && response.fieldErrors.length > 0) {
 					response.fieldErrors.forEach(function (error) {
@@ -767,7 +774,7 @@ function submitMediaFormAjaris(idObject, typeModal, level) {
 	}
 }
 
-function submitMediaForm(idObject, typeModal, idMedia, eltList) {
+function submitMediaForm(idObject, typeModal, idMedia, eltList, button) {
 	var url = '/bo/ajaris/edit/' + idMedia;
 	var globalErrorField = $("#editMediaGlobalError");
 	globalErrorField.hide();
@@ -782,9 +789,11 @@ function submitMediaForm(idObject, typeModal, idMedia, eltList) {
 			processData: false,
 			method: 'POST',
 			success: function () {
+				button.prop("disabled", false)
 				hideModelThen(reloadPresentationFun(idObject), "#modalAjoutDocument")();
 			},
 			error: function (errors) {
+				button.prop("disabled", false)
 				console.log(errors);
 				var response = errors.responseJSON;
 				if (response && response.fieldErrors && response.fieldErrors.length > 0) {
@@ -803,10 +812,12 @@ function submitMediaForm(idObject, typeModal, idMedia, eltList) {
 				}
 			}
 		});
+	} else {
+		button.prop("disabled", false)
 	}
 }
 
-function submitMediaFormFile(idObject, typeModal, level, fileInputElt, eltList) {
+function submitMediaFormFile(idObject, typeModal, level, fileInputElt, eltList, button) {
 	var url = '/bo/ajaris/createFile/' + typeModal + '/' + level + '/' + idObject;
 	var globalErrorField = $("#editMediaGlobalError");
 	globalErrorField.hide();
@@ -820,9 +831,11 @@ function submitMediaFormFile(idObject, typeModal, level, fileInputElt, eltList) 
 			processData: false,
 			method: 'POST',
 			success: function () {
+				button.prop("disabled", false)
 				hideModelThen(reloadPresentationFun(idObject), "#modalAjoutDocument")();
 			},
 			error: function (errors) {
+				button.prop("disabled", false)
 				console.log(errors);
 				var response = errors.responseJSON;
 				if (response && response.fieldErrors && response.fieldErrors.length > 0) {
@@ -848,6 +861,8 @@ function submitMediaFormFile(idObject, typeModal, level, fileInputElt, eltList) 
 				}
 			}
 		});
+	} else {
+		button.prop("disabled", false)
 	}
 }
 

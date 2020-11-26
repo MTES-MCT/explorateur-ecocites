@@ -15,7 +15,7 @@
 
     <groupId>com.efficacity</groupId>
     <artifactId>explorateur-ecocites</artifactId>
-    <version>v01.03.13</version>
+    <version>v01.03.14</version>
     <packaging>war</packaging>
 
     <name>Efficacity - Explorateur Ecocités</name>
