@@ -1,0 +1,121 @@
+/*
+ * Explorateur Écocités
+ * Copyright (C) 2019 l'État, ministère chargé du logement
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the Etalab Open License, version 2.0.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Etalab Open License for more details.
+ *
+ * You should have received a copy of the Etalab Open License along with this program. If not, see <https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf>.
+ */
+
+$search-field-size: 32px;
+.modal--search {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+
+.modal-body.modal-body--search{
+	margin: $navbar-height/4 auto;
+	background-color: transparent;
+	color: #fff;
+	width: 90%;
+	max-width: 500px;
+	overflow: visible;
+}
+
+.modal-content--search{
+	background-color: transparent;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.modal-header--search{
+	background-color: transparent;
+	height: $navbar-height;
+}
+
+
+form,
+.search-process-info {
+	width: 90%;
+	margin: 0 auto 1em;
+	width: 80%;
+}
+
+.search-process-info{
+	margin-top: 1em;
+}
+
+.search-form-title{
+	font-size: 1.25em;
+	text-align: center;
+	display: block;
+	font-weight: normal;
+}
+
+.search-input-wrapper{
+	position: relative;
+	width: 100%;
+	border: 1px solid #cccccc;
+	height: $search-field-size;
+	padding: 5px;
+}
+
+.search-input-wrapper input[type=text]{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-right: $search-field-size;
+	padding-left: 1em;;
+	border: none;
+	color :#0D223B;
+}
+
+.glass{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: $search-field-size;
+	background-image: url('/img/icons/ecocite_pue_glass_black.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 60%;
+}
+
+
+.search-results-list--modal{
+	margin-top: 4em;
+}
+
+.search-result{
+	width: 100%;
+	padding: 0;
+	border: solid 2px $gray-lighter;
+}
+
+.btn-search-result{
+	line-height: 2;
+}
+
+.search-result-nature{
+	margin-top: 0;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.search-result-name{
+	line-height: 1.25;
+	margin-bottom: 0;
+}
+
+.filter--modal{
+	background-color : #fff;
+	color: #0D223B;
+	border: 1px solid #A9A9A9;
+}

@@ -1,0 +1,86 @@
+<div id="viewerDiv"></div>
+<link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
+<link rel="stylesheet" href="./GpPluginOpenLayers.css" />
+<style type="text/css">
+  div#viewerDiv {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<script type="text/javascript" src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>
+<script data-key="piqg3tfm9tpbfvj4k5ld1lxu" src="./GpPluginOpenLayers.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+    var projection = ol.proj.get('EPSG:3857');
+    var resolutions = [
+      156543.03392804103,
+      78271.5169640205,
+      39135.75848201024,
+      19567.879241005125,
+      9783.939620502562,
+      4891.969810251281,
+      2445.9849051256406,
+      1222.9924525628203,
+      611.4962262814101,
+      305.74811314070485,
+      152.87405657035254,
+      76.43702828517625,
+      38.218514142588134,
+      19.109257071294063,
+      9.554628535647034,
+      4.777314267823517,
+      2.3886571339117584,
+      1.1943285669558792,
+      0.5971642834779396,
+      0.29858214173896974,
+      0.14929107086948493,
+      0.07464553543474241
+    ];
+
+    var map = new ol.Map({
+      target: 'viewerDiv',
+      layers: [
+        new ol.layer.GeoportalWMTS({
+          layer: "GEOGRAPHICALGRIDSYSTEMS.PLANIGN"
+        })
+      ],
+      view: new ol.View({
+        center: [288074.8449901076, 6247982.515792289],
+        zoom: 12
+      })
+    });
+    // Creation du controle
+    var mpControl = new ol.control.GeoportalMousePosition({});
+
+    // Ajout à la carte
+    map.addControl(mpControl);
+
+    function addPinAtCoordinate(coordinate) {
+      const pinnedLocation = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
+      const feature = new ol.Feature(new ol.geom.Point(coordinate));
+      const layer = new ol.layer.Vector({
+        source: new ol.source.Vector({
+          features: [feature]
+        }),
+        style: new ol.style.Style({
+          image: new ol.style.Icon({
+            src: '/img/icons/ecocite_popup_map_spot_ecocite.png',
+            anchor: [25, 38],
+            anchorXUnits: "pixels",
+            anchorYUnits: "pixels",
+          })
+        })
+      });
+      map.addLayer(layer);
+      return layer;
+    }
+
+    let pinLayer = addPinAtCoordinate(map.getView().getCenter())
+
+    map.on('singleclick', function (evt) {
+      map.removeLayer(pinLayer);
+      pinLayer = addPinAtCoordinate(evt.coordinate)
+    });
+
+  }
+</script>

@@ -1,0 +1,76 @@
+/*
+ * Explorateur Écocités
+ * Copyright (C) 2019 l'État, ministère chargé du logement
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the Etalab Open License, version 2.0.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Etalab Open License for more details.
+ *
+ * You should have received a copy of the Etalab Open License along with this program. If not, see <https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf>.
+ */
+
+.inv-c .navbar {background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c .navbar .navbar-nav *{color: #FF0!important; border-color: #FF0!important;}
+
+.inv-c .ecocite-hero--home {background: navy!important; border-color: #FF0!important;}
+.inv-c .ecocite-hero--home .contraste * {background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c .ecocite-hero--home *{color: #FF0!important; border-color: #FF0!important;}
+.inv-c .ecocite-hero--home .material-icons{color: #FF0!important; border-color: #FF0!important;}
+
+.inv-c .cookie-dialog {background-color: navy!important; border-color: #FF0!important; border-radius: 6px!important;}
+.inv-c .cookie-dialog div {color: #FF0!important;}
+.inv-c .cookie-dialog a {color: #FF0!important;}
+.inv-c .cookie-dialog button {color: #FF0!important; border-color:#FF0!important; background-color: navy!important;}
+
+.inv-c #map-section .modal-header {background: navy!important; color: #FF0!important; border-top: 1px solid #FF0!important;}
+.inv-c #map-section .modal-header *{background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c #map-section .map {background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c #map-section .map .colonneMap *{background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c #map-section .map .gp-feature-info-div {background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c #map-section .map .gp-feature-info-div *{background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c #map-section .map .gp-feature-info-div *:before{background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+
+.inv-c #axises-section {background: navy!important; color: #FF0!important;}
+.inv-c #axises-section #axises-header {background: navy!important; color: #FF0!important; border-top: 1px solid #FF0!important;}
+.inv-c #axises-section #axises-header * {background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+.inv-c #axises-section .axises-wrapper {background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+
+.inv-c .axises-wrapper .axis-link a {border: 1px solid #FF0!important;}
+.inv-c .axises-wrapper .axis-link a {background: navy!important;}
+.inv-c .axises-wrapper .axis-link a *{background: navy!important; color: #FF0!important;}
+
+.inv-c .footer {background: navy!important; color: #FF0!important; border-color: #FF0!important; border-top: 1px solid #FF0!important;}
+.inv-c .footer *{background: navy!important; color: #FF0!important; border-color: #FF0!important;}
+
+.inv-c #navbar-toggle-button{background-color: navy!important; border-color: #FF0!important;}
+.inv-c #navbar-toggle-button .icon-bar{background-color: #FF0!important;}
+
+
+.inv-c .modal-content{background: navy!important; color: #FF0!important;}
+.inv-c .modal-header{background: navy!important; border-bottom: 1px solid #FF0!important;}
+
+.inv-c .modal-sub-header{background: navy!important; border-bottom: 1px solid #FF0!important;}
+/*.inv-c .modal-sub-header input {background: navy!important; border: 1px solid #FF0!important; color: #FF0!important;}*/
+.inv-c .modal-sub-header a{background: navy!important; color: #FF0!important; border: 1px solid #FF0!important;}
+.inv-c .modal-sub-header .active a{background: #FF0!important; color: navy!important; border: 1px solid navy!important;}
+
+.inv-c .modal-body {background: navy!important; color: #FF0!important;}
+.inv-c .modal-body .tab-content a {background: navy!important; color: #FF0!important;}
+.inv-c .modal-body #search-result a{background: navy!important; color: #FF0!important; border: 1px solid #FF0!important;}
+.inv-c .modal-body #contactOnglet button{background: navy!important; color: #FF0!important; border: 1px solid #FF0!important;}
+.inv-c .glass {background-image: url('/img/icons/ecocite_pue_glass_yellow_contrast.svg')!important;}
+
+.div-contraste {background-color: white;margin-left: 0;margin-right: 0;margin-top: 15px;border: 1px solid black;padding-top: 4px;}
+.div-contraste-add {padding-right: 0;padding-left: 0px;}
+.div-contraste-remove {padding-left: 0px;padding-right: 0px;}
+.contraste{height: 50px;}
+
+$breakpoint-navbar: 1080px;
+@media (max-width: $breakpoint-navbar) {
+    .div-contraste {
+        width: 30px;
+        position: relative;
+        right: 14px;
+        top: 5px;
+    }
+}
