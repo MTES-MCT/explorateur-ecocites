@@ -38,7 +38,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <postgre.version>42.2.18</postgre.version>
+        <postgre.version>42.2.25</postgre.version>
         <isotope.generator.version>1.2.4</isotope.generator.version>
         <opencsv.version>4.0</opencsv.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
