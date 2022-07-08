@@ -38,13 +38,13 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
-        <postgre.version>42.2.18</postgre.version>
+        <postgre.version>42.3.3</postgre.version>
         <isotope.generator.version>1.2.4</isotope.generator.version>
-        <opencsv.version>4.0</opencsv.version>
+        <opencsv.version>5.0</opencsv.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <email.version>1.5</email.version>
-        <springboot.starter.freemarker.version>2.5.0</springboot.starter.freemarker.version>
+        <springboot.starter.freemarker.version>2.5.14</springboot.starter.freemarker.version>
         <junit.jupier.version>5.1.0</junit.jupier.version>
         <start-class>com.efficacity.explorateurecocites.ExplorateurEcocitesApplication</start-class>
         <generated-ressources>generated</generated-ressources>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
-            <version>2.5.0</version>
+            <version>2.5.10</version>
             <scope>provided</scope>
         </dependency>
 
@@ -183,7 +183,7 @@
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
-            <version>1.11.2</version>
+            <version>1.14.2</version>
         </dependency>
         <!-- Import des données -->
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -195,26 +195,26 @@
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>3.17</version>
+            <version>4.1.0</version>
         </dependency>
 
         <!-- To check MimeType -->
         <dependency>
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
-            <version>1.26</version>
+            <version>1.28.4</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-jaxb-annotations</artifactId>
-            <version>2.9.7</version>
+            <version>2.12.7</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
-            <version>2.9.7</version>
+            <version>2.12.7</version>
         </dependency>
 
         <dependency>
