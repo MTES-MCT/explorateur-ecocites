@@ -40,7 +40,7 @@
         <isotope.security.google>${project.version}</isotope.security.google>
         <isotope.users>${project.version}</isotope.users>
         <isotope.mail>${project.version}</isotope.mail>
-        <swagger.version>2.6.1</swagger.version>
+        <swagger.version>2.10.0</swagger.version>
         
     </properties>
 
