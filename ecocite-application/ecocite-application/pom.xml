@@ -44,7 +44,7 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <email.version>1.5</email.version>
-        <springboot.starter.freemarker.version>2.5.0</springboot.starter.freemarker.version>
+        <springboot.starter.freemarker.version>3.0.0</springboot.starter.freemarker.version>
         <junit.jupier.version>5.1.0</junit.jupier.version>
         <start-class>com.efficacity.explorateurecocites.ExplorateurEcocitesApplication</start-class>
         <generated-ressources>generated</generated-ressources>
